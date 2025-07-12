@@ -17,14 +17,14 @@ const Formulario = () => {
   const [prioridade, setPrioridade] = useState(enums.Prioridade.NORMAL);
   const cadastratTarefa = (evento: FormEvent) => {
     evento.preventDefault();
-    const tarefaAdicionar = new Tarefa(
-      titulo,
-      prioridade,
-      enums.Status.PENDENTE,
-      descricao,
-      9
+    dispatch(
+      cadastrar({
+        titulo,
+        prioridade,
+        descricao,
+        status: enums.Status.PENDENTE,
+      })
     );
-    dispatch(cadastrar(tarefaAdicionar));
     navigate('/');
   };
 

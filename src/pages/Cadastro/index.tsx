@@ -1,11 +1,11 @@
-import BarraLateral from "../../containers/BarraLateral";
-import Formulario from "../../containers/Formulario";
+import BarraLateral from '../../containers/BarraLateral';
+import Formulario from '../../containers/Formulario';
 
 const Cadastro = () => (
-    <>
-        <BarraLateral />
-        <Formulario />
-    </>
+  <>
+    <BarraLateral exibirFiltros={false} />
+    <Formulario />
+  </>
 );
 
 export default Cadastro;
